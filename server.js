@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 
-app.get('/:id', async (req, res) => {
+app.get('/getEmployeeByID/:id', async (req, res) => {
      try {
           console.log('req: ', req.params);
 
@@ -36,7 +36,7 @@ app.get('/:id', async (req, res) => {
      }
 });
 
-app.get('/:DateOfJoining/:DepName', async (req, res) => {
+app.get('/getEmployeeData/:DateOfJoining/:DepName', async (req, res) => {
      try {
           console.log('DateOfJoining: ', req.params.DateOfJoining);
           console.log('DepName: ', req.params.DepName);
